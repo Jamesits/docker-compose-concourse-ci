@@ -17,5 +17,11 @@ Testing:
 
 ```
 fly --target example-server login --concourse-url http://localhost:8080
+fly --target example-server status
+fly --target example-server userinfo
 fly --target example-server workers
+
+fly --target example-server set-pipeline -p hello-world -c .\test-fixtures\hello-world.yml
+fly --target example-server unpause-pipeline -p hello-world
+fly --target example-server trigger-job --job hello-world/hello-world-job --watch
 ```
