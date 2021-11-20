@@ -8,6 +8,8 @@ Notes:
 
 Deployment:
 
+First edit `CONCOURSE_EXTERNAL_URL` in `full/concourse_web.env`, then use the following script.
+
 ```
 cd full
 ./generate_keys.sh
