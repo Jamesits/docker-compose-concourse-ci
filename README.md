@@ -11,7 +11,7 @@ Deployment:
 ```
 cd full
 ./generate_keys.sh
-docker-compose -f docker-compose.yml -f docker-compose.worker.yml -f docker-compose.watchtower.yml --remove-orphans -d up
+docker-compose -f docker-compose.yml -f docker-compose.worker.yml -f docker-compose.watchtower.yml up -d --remove-orphans
 ```
 
 Testing:
