@@ -2,7 +2,8 @@ Docker compose example deployment for [Concourse CI](https://concourse-ci.org/).
 
 Notes:
 - full scalable deployment options provided
-- not secure by default, hardcoded keys everywhere
+- just enough config for running hello world pipelines and verify HA setups
+- **NOT secure** by default, hardcoded keys everywhere
 - somehow works
 
 Deployment:
@@ -19,7 +20,7 @@ Testing:
 fly --target example-server login --concourse-url http://localhost:8080
 fly --target example-server status
 fly --target example-server userinfo
-fly --target example-server workers
+fly --target example-server workers --details
 
 fly --target example-server set-pipeline -p hello-world -c .\test-fixtures\hello-world.yml
 fly --target example-server unpause-pipeline -p hello-world
