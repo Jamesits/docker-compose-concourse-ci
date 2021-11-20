@@ -26,3 +26,9 @@ fly --target example-server set-pipeline -p hello-world -c .\test-fixtures\hello
 fly --target example-server unpause-pipeline -p hello-world
 fly --target example-server trigger-job --job hello-world/hello-world-job --watch
 ```
+
+Memory Usage (empty server):
+- Nginx: 5MiB
+- web node: 25MiB per node
+- worker node: 42MiB per node
+- PostgreSQL: 100MiB
