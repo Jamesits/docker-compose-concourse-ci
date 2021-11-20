@@ -1,0 +1,26 @@
+version: '2.4'
+
+services:
+  concourse-worker-01:
+    image: concourse/concourse:latest
+    command: worker
+    privileged: true
+    volumes:
+      - "./deployment/concourse/worker-01:/worker-state"
+      - "./deployment/concourse/keys/worker:/mnt/keys:ro"
+    env_file:
+      - "./concourse_worker.env"
+    environment:
+      CONCOURSE_TAG: "tag1"
+
+  concourse-worker-02:
+    image: concourse/concourse:latest
+    command: worker
+    privileged: true
+    volumes:
+      - "./deployment/concourse/worker-02:/worker-state"
+      - "./deployment/concourse/keys/worker:/mnt/keys:ro"
+    env_file:
+      - "./concourse_worker.env"
+    environment:
+      CONCOURSE_TAG: "tag2"
