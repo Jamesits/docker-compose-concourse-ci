@@ -5,6 +5,7 @@ services:
     image: concourse/concourse:latest
     command: worker
     privileged: true
+    hostname: "worker-01"
     volumes:
       - "./deployment/concourse/worker-01:/worker-state"
       - "./deployment/concourse/keys/worker:/mnt/keys:ro"
@@ -18,6 +19,7 @@ services:
     image: concourse/concourse:latest
     command: worker
     privileged: true
+    hostname: "worker-02"
     volumes:
       - "./deployment/concourse/worker-02:/worker-state"
       - "./deployment/concourse/keys/worker:/mnt/keys:ro"
