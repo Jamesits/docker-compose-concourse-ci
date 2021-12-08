@@ -6,6 +6,7 @@ services:
     command: worker
     privileged: true
     hostname: "worker-01"
+    stop_signal: SIGUSR2
     volumes:
       - "./deployment/concourse/worker-01:/worker-state"
       - "./deployment/concourse/keys/worker:/mnt/keys:ro"
@@ -20,6 +21,7 @@ services:
     command: worker
     privileged: true
     hostname: "worker-02"
+    stop_signal: SIGUSR2
     volumes:
       - "./deployment/concourse/worker-02:/worker-state"
       - "./deployment/concourse/keys/worker:/mnt/keys:ro"
