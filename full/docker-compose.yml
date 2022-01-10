@@ -23,7 +23,7 @@ services:
   opa:
     image: "openpolicyagent/opa:latest"
     restart: "always"
-    command: "run --server --addr 0.0.0.0:80 --authentication off --authorization off --ignore=.* --watch /mnt/opa/examples"
+    command: "run --server --addr 0.0.0.0:80 --authentication off --authorization off --ignore=.* --skip-version-check --watch /mnt/opa/examples"
     volumes:
       - "./opa_examples:/mnt/opa/examples:ro"
 
