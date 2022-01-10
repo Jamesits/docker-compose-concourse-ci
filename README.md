@@ -35,3 +35,4 @@ Memory Usage (empty server):
 - web node: 25MiB per node
 - worker node: 42MiB per node
 - PostgreSQL: 100MiB
+- OPA: 22MiB
