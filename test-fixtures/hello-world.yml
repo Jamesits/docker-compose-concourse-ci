@@ -2,6 +2,7 @@ jobs:
 - name: hello-world-job
   plan:
   - task: hello-world-task
+    privileged: false # change to "true" to test out the default OPA deny rules
     config:
       # Tells Concourse which type of worker this task should run on
       platform: linux
