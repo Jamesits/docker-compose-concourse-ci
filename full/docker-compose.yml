@@ -20,6 +20,13 @@ services:
     volumes:
       - "./nginx.conf:/etc/nginx/nginx.conf:ro"
 
+  opa:
+    image: "openpolicyagent/opa:latest"
+    restart: "always"
+    command: "run --server --addr 0.0.0.0:80 --authentication off --authorization off --ignore=.* --watch /mnt/opa/examples"
+    volumes:
+      - "./opa_examples:/mnt/opa/examples:ro"
+
   concourse-web-01:
     image: concourse/concourse:latest
     command: web

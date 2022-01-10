@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 # Note: this script generate one worker key for all workers.
 # In real world scenarios, it is recommended to generate one key per worker.
 

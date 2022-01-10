@@ -4,6 +4,7 @@ Notes:
 - full scalable deployment options provided
 - just enough config for running hello world pipelines and verify HA setups
 - **NOT secure** by default, hardcoded keys everywhere
+- Open Policy Agent set up by default to deny all privileged actions against a worker
 - somehow works
 
 Deployment:
